@@ -1,4 +1,4 @@
-<%- include("../template/head", {quer}) -%>
+<%- include("../template/head", {quer, clear, tableData, waitListData}) -%>
 
 
 
@@ -24,14 +24,18 @@
         <div class="card-header">
           <h4>Current Reservations</h4>
 
-          <!-- <% for (var i = 0; i < tableData.length; i++) { %>
+          <% for (var i = 0; i < tableData.length; i++) { %>
 
-          $("<h2>").text("Table #" + (i + 1)),
-            $("<hr>"),
-            $("<h2>").text("ID: " + tableData[i].customerID),
-            $("<h2>").text("Name: " + tableData[i].customerName),
-            $("<h2>").text("Email: " + tableData[i].customerEmail),
-            $("<h2>").text("Phone: " + tableData[i].phoneNumber) -->
+            <hr>
+            <hr>
+            <h2>Table # <%= (i + 1) %></h2>
+            <hr>
+            <h4>ID: <%= tableData[i].customerID %></h4>
+            <h4>Name: <%= tableData[i].customerName %></h4>
+            <h4>Email: <%= tableData[i].customerEmail %></h4>
+            <h4>Phone: <%= tableData[i].phoneNumber %></h4>
+
+        <% } %>
         </div>
         <div class="card-body">
           <ul id="tableList" class="list-group"></ul>
@@ -42,6 +46,20 @@
       <div class="card mt-4">
         <div class="card-header">
           <h4>Waiting List</h4>
+          
+            <% for (var i = 0; i < waitListData.length; i++) { %>
+
+              <hr>
+              <hr>
+              <h2>Table # <%= (i + 1) %></h2>
+              <hr>
+              <h4>ID: <%= waitListData[i].customerID %></h4>
+              <h4>Name: <%= waitListData[i].customerName %></h4>
+              <h4>Email: <%= waitListData[i].customerEmail %></h4>
+              <h4>Phone: <%= waitListData[i].phoneNumber %></h4>
+
+            <% } %>
+
         </div>
         <div class="card-body">
           <ul id="waitList" class="list-group"></ul>
