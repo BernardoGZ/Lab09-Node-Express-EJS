@@ -23,6 +23,15 @@
       <div class="card">
         <div class="card-header">
           <h4>Current Reservations</h4>
+
+          <!-- <% for (var i = 0; i < tableData.length; i++) { %>
+
+          $("<h2>").text("Table #" + (i + 1)),
+            $("<hr>"),
+            $("<h2>").text("ID: " + tableData[i].customerID),
+            $("<h2>").text("Name: " + tableData[i].customerName),
+            $("<h2>").text("Email: " + tableData[i].customerEmail),
+            $("<h2>").text("Phone: " + tableData[i].phoneNumber) -->
         </div>
         <div class="card-body">
           <ul id="tableList" class="list-group"></ul>
@@ -40,7 +49,20 @@
       </div>
     </div>
   </div>
+  <!-- for (var i = 0; i < tableData.length; i++) {
 
+    // Get a reference to the tableList element and populate it with tables
+    var tableList = $("#tableList");
+
+    // Then display the fields in the HTML (Section Name, Date, URL)
+    var listItem = $("<li class='list-group-item mt-4'>");
+
+    listItem.append(
+      
+    );
+
+    tableList.append(listItem);
+  } -->
     
 
   <%- include("../template/footer", {clear}) -%>
